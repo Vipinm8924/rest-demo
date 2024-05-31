@@ -19,7 +19,7 @@ public class CustomerService {
         return customerRepository.findAll();
     }
 
-    public Customer getCustomerById(String customerId) {
+    public Customer getCustomerById(Long customerId) {
         return customerRepository.findById(customerId).orElse(null);
     }
 
@@ -31,7 +31,7 @@ public class CustomerService {
         return customerRepository.save(customer);
     }
 
-    public void deleteCustomer(String customerId) {
+    public void deleteCustomer(Long customerId) {
         customerRepository.deleteById(customerId);
     }
 }

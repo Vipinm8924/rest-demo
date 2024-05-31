@@ -7,7 +7,7 @@ import com.project.rest_demo.service.VendorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-        import java.util.List;
+import java.util.List;
 
 @RestController
 @RequestMapping("/vendors")
@@ -22,7 +22,7 @@ public class VendorController {
     }
 
     @GetMapping("/{id}")
-    public Vendor getVendorById(@PathVariable("id") String vendorId) {
+    public Vendor getVendorById(@PathVariable("id") Long vendorId) {
         return vendorService.getVendorById(vendorId);
     }
 
@@ -37,7 +37,7 @@ public class VendorController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteVendor(@PathVariable("id") String vendorId) {
+    public void deleteVendor(@PathVariable("id") Long vendorId) {
         vendorService.deleteVendor(vendorId);
     }
 }

@@ -18,7 +18,7 @@ public class VendorService {
         return vendorRepository.findAll();
     }
 
-    public Vendor getVendorById(String vendorId) {
+    public Vendor getVendorById(Long vendorId) {
         return vendorRepository.findById(vendorId).orElse(null);
     }
 
@@ -30,7 +30,7 @@ public class VendorService {
         return vendorRepository.save(vendor);
     }
 
-    public void deleteVendor(String vendorId) {
+    public void deleteVendor(Long vendorId) {
         vendorRepository.deleteById(vendorId);
     }
 }
